@@ -1,7 +1,7 @@
 # MendeleyExporter
 These scripts copy the mendeley database and extract from the copy the locations and titles of the files corresponding to a query by tag. The title is written in the metadata title of the output pdf for easy re-import into Mendeley or other bibliographic software interogating the embedded metadata.
 
-## requirements
+## Requirements
 - bash env
 - python 3 with sqlite plugin
 
@@ -12,6 +12,10 @@ if present output pdf in current directory
 ## Filter by tag: -t
 
 followed by a keyword corresponding to a tag in Mendeley library
+
+# Example
+
+./MendeleyExporter.bash -e -t keyword
 
 # TO DO
 - Windows (no bash)
