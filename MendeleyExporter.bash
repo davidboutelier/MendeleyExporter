@@ -2,6 +2,40 @@
 
 HERE=$(pwd)
 
+echo $# arguments
+
+if (( $# > 3 )); then
+    echo "Illegal number of arguments"
+fi
+
+for i in "$@" ; do
+    if [[ $i == "-e" ]] ; then
+        echo "export option set"
+        break
+    fi
+done
+
+j=1
+for i in "$@" ; do
+    if [[ $i == "-t" ]] ; then
+        echo "tag filtering option is set"
+        tpos=$j
+        next=$(( $tpos+1 ))
+        echo "$tpos"
+        echo "$next"
+    fi
+
+
+    if [[ $j == $next ]]; then
+      TAG=$i
+    fi
+
+    j=$[$j +1]
+
+done
+
+echo "tag is: $TAG"
+
  # 1 - Check mac or linux
  unameOut="$(uname -s)"
  case "${unameOut}" in
