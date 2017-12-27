@@ -5,10 +5,6 @@ These scripts copy the mendeley database and extract from the copy the locations
 - bash env
 - python 3 with sqlite plugin
 
-## Export pdf: -e 
-
-if present output pdf in current directory
-
 ## Filter by tag: -t
 
 followed by a keyword corresponding to a tag in Mendeley library
