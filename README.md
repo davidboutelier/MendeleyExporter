@@ -11,7 +11,7 @@ followed by a keyword corresponding to a tag in Mendeley library
 
 # Example
 
-./MendeleyExporter.bash -e -t keyword
+./MendeleyExporter.bash -t keyword
 
 # TO DO
 - Windows (no bash)
